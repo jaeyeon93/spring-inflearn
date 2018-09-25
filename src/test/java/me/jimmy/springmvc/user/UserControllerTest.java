@@ -12,9 +12,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(UserController.class)
@@ -42,5 +40,17 @@ public class UserControllerTest {
                         is(equalTo("jimmy"))))
         .andExpect(jsonPath("$.password",
                 is(equalTo("123"))));
+    }
+
+    @Test
+    public void createUser_XML() throws Exception {
+        String userJson = "{\"username\":\"jimmy\", \"password\":\"123\"}";
+        mockMvc.perform(post("/users/create")
+        .contentType(MediaType.APPLICATION_JSON_UTF8)
+        .accept(MediaType.APPLICATION_XML)
+        .content(userJson))
+                .andExpect(status().isOk())
+                .andExpect(xpath("/User/username").string("jimmy"))
+                .andExpect(xpath("/User/password").string("123"));
     }
 }
