@@ -27,6 +27,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll();
     }
 
+    
     @Bean
     @Override
     protected UserDetailsService userDetailsService() {
