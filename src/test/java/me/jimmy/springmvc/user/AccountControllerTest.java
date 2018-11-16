@@ -1,5 +1,6 @@
 package me.jimmy.springmvc.user;
 
+import me.jimmy.springmvc.AccountController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +16,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(UserController.class)
-public class UserControllerTest {
+@WebMvcTest(AccountController.class)
+public class AccountControllerTest {
 
     @Autowired
     MockMvc mockMvc;
