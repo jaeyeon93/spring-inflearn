@@ -1,6 +1,5 @@
-package me.jimmy.springmvc;
+package me.jimmy.springmvc.ioc;
 
-import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextClosedEvent;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.ContextStartedEvent;
