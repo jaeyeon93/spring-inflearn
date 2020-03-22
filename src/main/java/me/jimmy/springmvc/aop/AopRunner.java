@@ -1,18 +1,19 @@
-package me.jimmy.springmvc;
+package me.jimmy.springmvc.aop;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
-import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AppRunner implements ApplicationRunner {
+public class AopRunner implements ApplicationRunner {
     @Autowired
-    private ApplicationEventPublisher publisher;
+    private EvenetService evenetService;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        publisher.publishEvent(new MyEvenet(this, 100));
+        evenetService.createEvent();
+        evenetService.publishEvent();
+        evenetService.deleteEvent();
     }
 }

@@ -1,4 +1,4 @@
-package me.jimmy.springmvc;
+package me.jimmy.springmvc.ioc;
 
 public interface BookRepository {
 }

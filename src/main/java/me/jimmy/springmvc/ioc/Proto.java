@@ -1,4 +1,4 @@
-package me.jimmy.springmvc;
+package me.jimmy.springmvc.ioc;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
