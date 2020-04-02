@@ -1,4 +1,4 @@
-package me.jimmy.springmvc.jpa;
+package me.jimmy.springmvc.jpa.customRepo;
 
 import org.springframework.data.repository.NoRepositoryBean;
 import org.springframework.data.repository.Repository;

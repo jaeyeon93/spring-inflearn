@@ -1,4 +1,6 @@
-package me.jimmy.springmvc.jpa;
+package me.jimmy.springmvc.jpa.queryMethod;
+
+import me.jimmy.springmvc.jpa.event.Post;
 
 import javax.persistence.*;
 import java.util.Date;

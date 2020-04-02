@@ -1,4 +1,4 @@
-package me.jimmy.springmvc.jpa;
+package me.jimmy.springmvc.jpa.beanScan;
 
 public class Jimmy {
     private String name;

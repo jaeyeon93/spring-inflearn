@@ -1,11 +1,11 @@
-package me.jimmy.springmvc.jpa;
+package me.jimmy.springmvc.jpa.queryMethod;
 
+import me.jimmy.springmvc.jpa.event.Post;
+import me.jimmy.springmvc.jpa.customRepo.MyRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
-import java.util.stream.Stream;
 
 public interface CommentRepository extends MyRepository<Comment, Long> {
 
